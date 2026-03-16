@@ -1,0 +1,4 @@
+INSERT INTO KhachHang (MAKH, Ten_KH, Gioi_Tinh, Nam_Sinh) VALUES 
+('KH1', 'Vẫn Như Cũ', 'Nam', 2006),
+('KH2', 'Cũng Là Em', 'Nữ', 2005),
+('KH3', 'Tên mình', NULL, 2007);
