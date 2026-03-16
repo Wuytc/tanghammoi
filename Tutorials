@@ -1,0 +1,40 @@
+Câu 2 Tại bảng mặt hàng chèn thêm một cột có tên là Han_SD kiểu DL là varchar(50) 
+   Gợi ý: cú pháp như sau. 
+   Alter table MatHang 
+   Add Han_SD varchar(50); 
+Câu 3 Nhập dữ liệu cho bảng bảng như đề mẫu 
+  VD: NHẬP DL VÀO BẢNG Khách hàng 
+  INSERT INTO KhachHang VALUES 
+  ( ‘kh1’, ‘ Vẫn Như Cũ’, ‘Nam’, 2006), 
+  ( ‘KH2’, ‘ Cũng là em, ‘Nữ’, 2005) ; 
+  Phần còn lại nhập tương tự 
+Câu 4: Hiển thị tên khách hàng và giới tính 
+  Select Ten_KH, gioi_tinh 
+  From KhachHang; 
+Câu 5. Hiển thị tên mặt hàng và đơn giá 
+  Select Ten_Mh, donGia 
+  From MatHang; 
+Câu 6. Xóa Dữ liệu trong Bảng (Xóa mặt hàng bí đao trong BẢNG mặt hàng) 
+  SoDon MaKH MaMH SL ThanhTien 
+  SD01 KH01 1 2 30000 
+  SD02 KH01 4 1 14000 
+  SD03 Kh02 1 4 60000 
+ 
+  Delete from MatHang 
+  Where ma_MH =4; 
+Câu 7. Trong Bảng Mặt Hàng sửa đơn giá Cà chua thành 18000 
+  Update MatHang 
+  Set dongia=1800 
+  Where MaMH=1; 
+Câu 8 Hiển thị tên khách hàng và Thành tiền ( Câu này hiển thị TT của 2 bảng nên cần liên kết 2 bảng lại) 
+  Select KhachHang.Ten_Kh, HoaDon.ThanhTien 
+  From KhachHang INNER JOIN HoaDon 
+  On KhachHang.MaKh=HoDon.MaKh; 
+Câu 9. Tính trung bình thành tiền của tất cả khách hàng trong bảng hóa đơn. 
+  select avg(thanhtien) from HoaDon; 
+  Lưu Ý; 
+  Lệnh xóa cột 
+  Alter table tên bảng cần xóa 
+  Drop tên cột cần xóa ; 
+  Xóa Bảng 
+  Drop tên bảng cần xóa;
